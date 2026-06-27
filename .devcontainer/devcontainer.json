@@ -2,7 +2,7 @@
   "name": "IA para Developers",
   "dockerComposeFile": "../docker-compose.yml",
   "service": "llm-dev",
-  "workspaceFolder": "/workspace",
+  "workspaceFolder": "/workspaces/ia-devs",
   "shutdownAction": "stopCompose",
   "customizations": {
     "vscode": {
@@ -32,7 +32,7 @@
       }
     }
   },
-  "postCreateCommand": "pip install --upgrade pip && pip install langchain langchain-community langchain-openai openai chromadb jupyter requests pytest black python-dotenv pandas fastapi uvicorn sqlalchemy pydantic hypothesis && curl http://ollama:11434/api/pull -d '{\"name\": \"phi3\"}'",
+  "postCreateCommand": "pip install --upgrade pip && pip install langchain langchain-community langchain-openai openai chromadb jupyter requests pytest black python-dotenv pandas fastapi uvicorn sqlalchemy pydantic hypothesis && chmod +x .devcontainer/init-ollama.sh && .devcontainer/init-ollama.sh &",
   "remoteUser": "root",
   "forwardPorts": [8888, 11434, 5432]
 }

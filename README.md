@@ -22,7 +22,7 @@ La primera vez tarda 3-5 min (descarga imágenes Docker, dependencias Python y m
 Una vez cargado el entorno en el Dev Container de VS Code, ejecuta la verificación en la terminal integrada:
 
 ```bash
-python /workspace/hello.py
+python workspace/hello.py
 ```
 
 Debería mostrar: `✅ Ollama responde en http://ollama:11434` junto con la versión de Python instalada.
