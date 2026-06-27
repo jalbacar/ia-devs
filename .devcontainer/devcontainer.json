@@ -32,7 +32,7 @@
       }
     }
   },
-  "postCreateCommand": "pip install --upgrade pip && pip install langchain langchain-community langchain-openai openai chromadb jupyter requests pytest black python-dotenv pandas fastapi uvicorn sqlalchemy pydantic hypothesis && chmod +x .devcontainer/init-ollama.sh && .devcontainer/init-ollama.sh &",
+  "postCreateCommand": "chmod +x .devcontainer/init-ollama.sh && .devcontainer/init-ollama.sh &",
   "remoteUser": "root",
   "forwardPorts": [8888, 11434, 5432]
 }
