@@ -32,11 +32,11 @@ else
   echo "⚠️ Advertencia: Falló la descarga del modelo phi3."
 fi
 
-echo "📥 Descargando modelo smollm:135m..."
-if curl -s -X POST "http://$OLLAMA_HOST:$OLLAMA_PORT/api/pull" -d '{"name": "smollm:135m"}' > /dev/null; then
-  echo "✅ Modelo smollm:135m descargado correctamente."
+echo "📥 Descargando modelo qwen2.5:0.5b..."
+if curl -s -X POST "http://$OLLAMA_HOST:$OLLAMA_PORT/api/pull" -d '{"name": "qwen2.5:0.5b"}' > /dev/null; then
+  echo "✅ Modelo qwen2.5:0.5b descargado correctamente."
 else
-  echo "⚠️ Advertencia: Falló la descarga del modelo smollm:135m."
+  echo "⚠️ Advertencia: Falló la descarga del modelo qwen2.5:0.5b."
 fi
 
 exit 0

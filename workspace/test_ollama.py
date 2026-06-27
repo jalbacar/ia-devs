@@ -2,7 +2,7 @@ import requests
 
 url = "http://ollama:11434/api/generate"
 payload = {
-    "model": "smollm:135m",
+    "model": "qwen2.5:0.5b",
     "prompt": "Say hello and introduce yourself in one sentence.",
     "stream": False
 }
