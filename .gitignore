@@ -1,0 +1,40 @@
+# === Entorno local / API Keys ===
+.env
+.env.local
+.env.*.local
+*.env
+
+# === Python / Jupyter ===
+**/__pycache__/
+**/*.pyc
+**/*.pyo
+**/*.pyd
+.Python
+env/
+venv/
+.venv/
+pip-log.txt
+pip-delete-this-directory.txt
+.ipynb_checkpoints/
+.pytest_cache/
+.coverage
+htmlcov/
+
+# === Docker & Bases de datos locales ===
+pgdata/
+ollama/
+
+# === VS Code / Editores ===
+.vscode/
+# Nota: no ignoramos .devcontainer/ porque contiene la configuración de desarrollo compartida
+.history/
+*.code-workspace
+
+# === Sistema operativo ===
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db

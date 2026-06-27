@@ -1,0 +1,38 @@
+{
+  "name": "IA para Developers",
+  "dockerComposeFile": "../docker-compose.yml",
+  "service": "llm-dev",
+  "workspaceFolder": "/workspace",
+  "shutdownAction": "stopCompose",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-python.python",
+        "ms-python.vscode-pylance",
+        "ms-toolsai.jupyter",
+        "ms-toolsai.jupyter-keymap",
+        "ms-toolsai.jupyter-renderers",
+        "GitHub.copilot",
+        "GitHub.copilot-chat",
+        "continue.continue",
+        "eamodio.gitlens",
+        "streetsidesoftware.code-spell-checker",
+        "bierner.markdown-mermaid"
+      ],
+      "settings": {
+        "python.defaultInterpreterPath": "/usr/local/bin/python",
+        "python.terminal.activateEnvironment": false,
+        "jupyter.jupyterServerType": "local",
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "ms-python.python",
+        "files.exclude": {
+          "**/__pycache__": true,
+          "**/*.pyc": true
+        }
+      }
+    }
+  },
+  "postCreateCommand": "pip install --upgrade pip && pip install langchain langchain-community langchain-openai openai chromadb jupyter requests pytest black python-dotenv pandas fastapi uvicorn sqlalchemy pydantic hypothesis && curl http://ollama:11434/api/pull -d '{\"name\": \"phi3\"}'",
+  "remoteUser": "root",
+  "forwardPorts": [8888, 11434, 5432]
+}
