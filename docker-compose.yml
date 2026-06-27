@@ -4,6 +4,7 @@ services:
     build:
       context: .
       dockerfile: .devcontainer/Dockerfile
+    image: ia-devs-llm-dev:latest
     container_name: llm-dev
     working_dir: /workspaces/ia-devs
     volumes:
