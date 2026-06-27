@@ -11,7 +11,14 @@ print("Sending request to Ollama...")
 try:
     response = requests.post(url, json=payload, timeout=15)
     result = response.json()
-    print("\n✅ Response from Ollama:")
-    print(result.get("response", "No response content found."))
+    if "response" in result:
+        print("\n✅ Response from Ollama:")
+        print(result["response"])
+    elif "error" in result:
+        print("\n❌ Ollama returned an error:")
+        print(result["error"])
+    else:
+        print("\n⚠️ Unexpected response format:")
+        print(result)
 except Exception as e:
     print("\n❌ Error connecting to Ollama:", e)
