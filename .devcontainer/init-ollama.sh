@@ -37,6 +37,8 @@ if curl -s -X POST "http://$OLLAMA_HOST:$OLLAMA_PORT/api/pull" -d '{"name": "qwe
   echo "✅ Modelo qwen2.5:0.5b descargado correctamente."
 else
   echo "⚠️ Advertencia: Falló la descarga del modelo qwen2.5:0.5b."
-fi
+# Lanzar la interfaz de chat en Streamlit en segundo plano
+echo "🚀 Iniciando interfaz de chat de Streamlit en el puerto 3000..."
+nohup streamlit run workspace/chat_ui.py --server.port 3000 --server.address 0.0.0.0 > /tmp/streamlit.log 2>&1 &
 
 exit 0

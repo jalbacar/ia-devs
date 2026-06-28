@@ -18,6 +18,7 @@ RUN pip install --no-cache-dir \
     openai \
     chromadb \
     jupyter \
+    streamlit \
     requests \
     pytest \
     black \
