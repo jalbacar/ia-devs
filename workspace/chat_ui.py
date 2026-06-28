@@ -20,8 +20,8 @@ except Exception:
 if not models:
     models = ["qwen2.5:0.5b"]
 
-# Selector de modelo
-model_selected = st.selectbox("Selecciona el modelo de IA:", models, index=0)
+# Entrada libre para escribir el modelo deseado
+model_selected = st.text_input("Escribe el modelo de IA que deseas usar:", value="qwen2.5:0.5b")
 
 # Mostrar historial de chat
 for message in st.session_state.messages:
