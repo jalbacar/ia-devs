@@ -1,0 +1,17 @@
+langchain
+langchain-community
+langchain-openai
+openai
+chromadb
+jupyter
+streamlit
+requests
+pytest
+black
+python-dotenv
+pandas
+fastapi
+uvicorn
+sqlalchemy
+pydantic
+hypothesis

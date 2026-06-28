@@ -10,22 +10,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 # Actualizar pip
 RUN pip install --no-cache-dir --upgrade pip
 
-# Instalar dependencias de Python necesarias para el curso
-RUN pip install --no-cache-dir \
-    langchain \
-    langchain-community \
-    langchain-openai \
-    openai \
-    chromadb \
-    jupyter \
-    streamlit \
-    requests \
-    pytest \
-    black \
-    python-dotenv \
-    pandas \
-    fastapi \
-    uvicorn \
-    sqlalchemy \
-    pydantic \
-    hypothesis
+# Instalar dependencias de Python necesarias para el curso desde requirements.txt
+COPY requirements.txt /tmp/pip-tmp/
+RUN pip install --no-cache-dir -r /tmp/pip-tmp/requirements.txt \
+    && rm -rf /tmp/pip-tmp
