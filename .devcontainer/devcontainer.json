@@ -34,5 +34,5 @@
   },
   "postCreateCommand": "chmod +x .devcontainer/init-ollama.sh && .devcontainer/init-ollama.sh &",
   "remoteUser": "root",
-  "forwardPorts": [8888, 11434, 5432]
+  "forwardPorts": [8888, 11434, 5432, 3000]
 }
